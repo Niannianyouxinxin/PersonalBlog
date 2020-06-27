@@ -21,6 +21,7 @@ var blogComments = new Vue({
         }).then(function(resp){
             blogComments.comments = resp.data.data;
             for(var i = 0;i < blogComments.comments.length;i++){
+                blogComments.comments[i].ctime = new Date(resp.data.data[i].ctime * 1000).toLocaleString();
                 if(blogComments.comments[i].parent > -1){
                     blogComments.comments[i].options = "回复@" + blogComments.comments[i].parent_name;
                 }
