@@ -187,10 +187,11 @@ body{
 
 .footer{
     width: 100%;
-    height: 60px;
+    height: 80px;
     background: #191918;
     text-align: center;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .footer > ul {
