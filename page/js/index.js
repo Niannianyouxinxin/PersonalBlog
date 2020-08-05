@@ -58,7 +58,11 @@ var articleList = new Vue({
                         for(var i = 0;i < result.length;i++){
                             var temp = {};
                             temp.title = result[i].title;
+<<<<<<< HEAD
                             temp.content = result[i].content.replace(/<.*?>/g,'').replace(/&nbsp;/g,"").replace(/&lt;/g,"").replace(/&gt;/g,"") + "...";
+=======
+                            temp.content = result[i].content;
+>>>>>>> 59a3d2c37a3679d1f283ed3a5505b2312c7cc823
                             temp.date = result[i].ctime;
                             temp.date = new Date(result[i].ctime * 1000).toLocaleString();
                             temp.views = result[i].views;
@@ -69,7 +73,10 @@ var articleList = new Vue({
                         }
                         articleList.articleList = list;
                         articleList.page = page;
+<<<<<<< HEAD
                         console.log(list)
+=======
+>>>>>>> 59a3d2c37a3679d1f283ed3a5505b2312c7cc823
                     }).catch(function(resp){
                         console.log("请求错误");
                     });

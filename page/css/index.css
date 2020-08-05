@@ -47,7 +47,11 @@
     display: inline-block;
     font-size: 20px;
     text-decoration: none;
+<<<<<<< HEAD
     color: #2479cc;
+=======
+    color: #13102b;
+>>>>>>> 59a3d2c37a3679d1f283ed3a5505b2312c7cc823
     padding: 20px 10px 5px 10px;
     /* text-align: left; */
 }
