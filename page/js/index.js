@@ -58,7 +58,7 @@ var articleList = new Vue({
                         for(var i = 0;i < result.length;i++){
                             var temp = {};
                             temp.title = result[i].title;
-                            temp.content = result[i].content;
+                            temp.content = result[i].content.replace(/<.*?>/g,'').replace(/&nbsp;/g,"").replace(/&lt;/g,"").replace(/&gt;/g,"") + "...";
                             temp.date = result[i].ctime;
                             temp.date = new Date(result[i].ctime * 1000).toLocaleString();
                             temp.views = result[i].views;
@@ -69,6 +69,7 @@ var articleList = new Vue({
                         }
                         articleList.articleList = list;
                         articleList.page = page;
+                        console.log(list)
                     }).catch(function(resp){
                         console.log("请求错误");
                     });
