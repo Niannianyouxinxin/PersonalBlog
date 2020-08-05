@@ -32,7 +32,7 @@ var blogDetail = new Vue({
             var result = resp.data.data[0];
             blogDetail.title = result.title;
             blogDetail.content = result.content;
-            blogDetail.ctime = result.ctime;
+            blogDetail.ctime = new Date(result.ctime * 1000).toLocaleString();
             blogDetail.tags = result.tags;
             blogDetail.views = result.views;
         }).catch(function (resp) {
